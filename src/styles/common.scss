@@ -1,0 +1,42 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+* {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+@font-face {
+	font-family: 'AlibabaSans-Black';
+	src: url('../../src/assets/fonts/AlibabaSans-Black.otf');
+}
+@font-face {
+	font-family: 'AlibabaSans-Regular';
+	src: url('../../src/assets/fonts/AlibabaSans-Regular.otf');
+}
+
+@font-face {
+	font-family: 'AlibabaSans-Bold';
+	src: url('../../src/assets/fonts/AlibabaSans-Bold.otf');
+}
+@font-face {
+	font-family: 'PingFangSC-Medium';
+	src: url('../../src/assets/fonts/PingFangSC-Medium.otf');
+}
+@font-face {
+	font-family: 'PingFangSC-Regular';
+	src: url('../../src/assets/fonts/PingFangSC-Regular.ttf');
+}
+@font-face {
+	font-family: 'AlibabaSans-MediumItalic';
+	src: url('../../src/assets/fonts/AlibabaSans-MediumItalic.otf');
+}
+@font-face {
+	font-family: 'PingFangSC-Semibold';
+	src: url('../../src/assets/fonts/PingFangSC-Semibold.otf');
+}

@@ -1,0 +1,6 @@
+@function get-vw($px, $base: 1920px) {
+	@return ($px / $base) * 100vw;
+}
+@function get-vh($px, $base: 1080px) {
+	@return ($px / $base) * 100vh;
+}

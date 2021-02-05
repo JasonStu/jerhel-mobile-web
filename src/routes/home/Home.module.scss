@@ -1,0 +1,55 @@
+@import '@/styles/function.scss';
+@import '@/styles/variables.scss';
+.home {
+	height: 100%;
+	overflow: hidden;
+	transform: translate3d(0, -100%, 0);
+}
+// :global(.swiper-container) {
+// 	overflow: hidden;
+// }
+.content {
+	background: center / cover no-repeat url('../../assets/home_back1.png');
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: calc(100vh - 88px);
+}
+.logo {
+	width: 128px;
+	margin-bottom: 40px;
+	margin-top: 100px;
+}
+.title {
+	max-width: 727px;
+	line-height: 70px;
+	font-size: 60px;
+	font-weight: 900;
+	text-align: center;
+	font-family: AlibabaSans-Black, AlibabaSans;
+	color: #333;
+	letter-spacing: 5px;
+}
+
+.subtitle {
+	margin-top: 60px;
+	text-align: center;
+	font-size: 24px;
+	width: 634px;
+	font-family: AlibabaSans-Regular, AlibabaSans;
+	font-weight: 400;
+	color: #333333;
+	line-height: 36px;
+}
+.bottomText {
+	margin-top: 30px;
+	width: 438px;
+	height: 92px;
+	font-size: 36px;
+	font-family: AlibabaSans-Bold, AlibabaSans;
+	font-weight: bold;
+	color: #884bb0;
+	line-height: 46px;
+	text-align: center;
+}

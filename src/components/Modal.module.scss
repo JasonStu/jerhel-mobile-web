@@ -1,0 +1,38 @@
+@import '@/styles/variables.scss';
+:global {
+	.am-modal-transparent {
+		width: 700px;
+		// height: 80vh;
+		.am-modal-content {
+			background-color: $primaryColor;
+			border-radius: 20px;
+			padding: 0;
+			.am-modal-body {
+				padding: 0;
+			}
+		}
+	}
+}
+.modalHeader {
+	height: 76px;
+	.close {
+		width: 36px;
+		height: 36px;
+		margin: 20px;
+		border: 1px solid white;
+		border-radius: 50%;
+		float: right;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: pointer;
+		img {
+			display: block;
+			width: 20px;
+		}
+	}
+}
+.contentContainer {
+	padding-left: 50px;
+	padding-right: 50px;
+}
