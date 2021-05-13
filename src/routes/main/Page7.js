@@ -1,15 +1,11 @@
 import React from 'react';
 import styles from './Main.module.scss';
-import logo from '@/assets/logo.png';
-import twitterIcon from '@/assets/twitter.png';
-import instagramIcon from '@/assets/instagram.png';
-import arrow from '@/assets/arrow.png';
 const Page7 = () => {
 	return (
 		<div className={`${styles.page} ${styles.page7} enableScroll`}>
 			<div className={styles.contentWr}>
 				<div className={styles.content}>
-					<img className={styles.logo} src={logo} alt="logo" />
+					<img className={styles.logo} src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/logo.png'} alt="logo" />
 					<div className={styles.title}>
 						CONNECT WITH JERHÉL TO GET STARTED
 					</div>
@@ -20,13 +16,13 @@ const Page7 = () => {
 					<div className={styles.contactBtn}>
 						CONTACT
 						<span className={styles.arrow}>
-							<img src={arrow} alt="arrow" />
+							<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/arrow.png'} alt="arrow" />
 						</span>
 					</div>
 				</div>
 			</div>
 			<div className={styles.intro}>
-				<img className={styles.logo} src={logo} alt="logo" />
+				<img className={styles.logo} src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/logo.png'} alt="logo" />
 				<div className={styles.subscribeWr}>
 					<div className={styles.btn}>
 						Subscribe to our newsletter
@@ -36,8 +32,8 @@ const Page7 = () => {
 				<div className={styles.item}>
 					<div className={styles.label}>SOCIAL MEDIA</div>
 					<div className={styles.value}>
-						<img src={twitterIcon} alt="twitter" />
-						<img src={instagramIcon} alt="instagram" />
+						<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/twitter.png'} alt="twitter" />
+						<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/instagram.png'} alt="instagram" />
 					</div>
 				</div>
 				<div className={styles.item}>

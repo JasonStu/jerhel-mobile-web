@@ -1,7 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './Home.module.scss';
-import logo from '@/assets/logo.png';
 import Main from '@/routes/main/Main';
 // Import Swiper styles
 import 'swiper/swiper.scss';
@@ -10,7 +9,7 @@ const Home = () => {
 		<Swiper direction="vertical" noSwipingClass="enableScroll">
 			<SwiperSlide>
 				<div className={styles.content}>
-					<img alt="logo" className={styles.logo} src={logo} />
+					<img alt="logo" className={styles.logo} src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/logo.png'} />
 					<div className={styles.title}>
 						THE LEADER IN COSMETICS PACKAGING
 					</div>

@@ -4,8 +4,6 @@ import Select from 'react-select';
 import _ from 'lodash';
 import { request } from '@/utils/http.js'
 import styles from './Search.module.scss';
-import searchIcon from '../../assets/search.png';
-import closeIcon from '../../assets/close.png';
 const options = [
 	{ value: 'product', label: 'NEW PRODUCTS' },
 	{ value: 'bottle', label: 'JAR/BOTTLE' },
@@ -76,7 +74,7 @@ const Search = withRouter(({ history, setVisible }) => {
 	return (
 		<div className={styles.content}>
 			<img
-				src={closeIcon}
+				src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/close.png'}
 				alt="close"
 				className={styles.close}
 				onClick={() => setVisible(false)}
@@ -87,17 +85,17 @@ const Search = withRouter(({ history, setVisible }) => {
 						getCategoryList({ name: v.target.value })
 					}, 500)} />
 					<span className={styles.suffix}>
-						<img src={searchIcon} alt="search" />
+						<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/search.png'} alt="search" />
 					</span>
 				</div>
-				<Select
+				{/* <Select
 					defaultValue={selectedOption}
 					className={styles.select}
 					classNamePrefix="react-select"
 					styles={customStyles}
 					onChange={setSelectedOption}
 					options={options}
-				/>
+				/> */}
 			</div>
 			<div className={styles.list}>
 				{_.map(goodsList, (item, index) => (

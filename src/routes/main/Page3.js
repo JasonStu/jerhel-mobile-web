@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './Main.module.scss';
 
-import model from '@/assets/model.png';
 const Page3 = () => {
 	return (
 		<div className={`${styles.page} ${styles.page3} enableScroll`}>
 			<div className={styles.model}>
-				<img src={model} alt="model" />
+				<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/model.png'} alt="model" />
 			</div>
 			<div className={styles.textSection}>
 				<h3 className={styles.title}>ELEGANCE MEETS PRECISION</h3>

@@ -8,7 +8,6 @@ import Page5 from './Page5';
 import Page6 from './Page6';
 import Page7 from './Page7';
 import styles from './Main.module.scss';
-import line from '@/assets/line.png';
 const menus = [
 	{ label: 'An Originator and Innovator', value: '1' },
 	{ label: 'From Concept To Consumer', value: '2' },
@@ -42,7 +41,7 @@ class Menu extends React.Component {
 									<div className={styles.label}>
 										{menu.label}
 									</div>
-									<img src={line} alt="indicator" />
+									<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/line.png'} alt="indicator" />
 								</div>
 							)}
 						</SwiperSlide>

@@ -10,6 +10,7 @@
 	background-color: rgba($primaryColor, 0.8);
 	animation: _right .3s linear;
 	animation-fill-mode: forwards;
+	font-size: 0;
 	:global {
 		.react-select {
 			&__control {
@@ -42,7 +43,7 @@
 			position: relative;
 			font-size: 14px;
 			width: 100%;
-			margin-bottom: 60px;
+			margin-bottom: 30px;
 			input {
 				background-color: #fff;
 				background-image: none;
@@ -89,7 +90,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 80px;
-		margin-top: 20px;
+		// margin-top: 20px;
 		padding-top: 52px;
 		height: calc(100% - 372px);
 		overflow: auto;

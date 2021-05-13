@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Main.module.scss';
-import sketch from '@/assets/sketch.png';
+
 const Page2 = () => {
 	return (
 		<div className={`${styles.page} ${styles.page2} enableScroll`}>
 			<div className={styles.image}>
-				<img src={sketch} alt="Sketch" />
+				<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/sketch.png'} alt="Sketch" />
 			</div>
 			<div className={styles.textSection}>
 				<h3 className={styles.title}>FROM CONCEPT TO CONSUMER</h3>

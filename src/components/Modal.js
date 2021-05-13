@@ -1,5 +1,4 @@
 import React from 'react';
-import closeIcon from '@/assets/close.svg';
 import styles from './Modal.module.scss';
 
 import { Modal } from 'antd-mobile';
@@ -8,7 +7,7 @@ const CModal = ({ children, visible, onClose }) => {
 		<Modal transparent visible={visible}>
 			<div className={styles.modalHeader}>
 				<div className={styles.close} onClick={() => onClose()}>
-					<img src={closeIcon} alt="close" />
+					<img src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/close.svg'} alt="close" />
 				</div>
 			</div>
 			<div className={styles.contentContainer}>{children}</div>

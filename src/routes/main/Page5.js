@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 import styles from './Main.module.scss';
-import center from '@/assets/main_page_5/center.png';
-import icon1 from '@/assets/main_page_5/icon_1.png';
-import icon2 from '@/assets/main_page_5/icon_2.png';
-import icon3 from '@/assets/main_page_5/icon_3.png';
-import right from '@/assets/main_page_5/right.png';
-import more from '@/assets/main_page_1/more.png';
 
 import Modal from '@/components/Modal';
 const Page5 = () => {
@@ -16,30 +10,30 @@ const Page5 = () => {
 				<div className={styles.inner}>
 					<img
 						alt="sec_1_center"
-						src={center}
+						src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/main_page_5/center.png'}
 						className={styles.centerImg}
 					/>
 					<div className={styles.bottomMenu}>
 						<div className={styles.imageWr}>
 							<img
 								alt="sec_1_icon1"
-								src={icon1}
+								src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/main_page_5/icon_1.png'}
 								className={styles.icon}
 							></img>
 							<img
 								alt="sec_1_icon1"
-								src={icon2}
+								src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/main_page_5/icon_2.png'}
 								className={styles.icon}
 							></img>
 							<img
 								alt="sec_1_icon1"
-								src={icon3}
+								src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/main_page_5/icon_3.png'}
 								className={styles.icon}
 							></img>
 						</div>
 						<img
 							className={styles.more}
-							src={more}
+							src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/main_page_1/more.png'}
 							alt=""
 							onClick={() => setVisible(true)}
 						/>
@@ -78,7 +72,7 @@ const Page5 = () => {
 			</div>
 			<Modal visible={visible} onClose={() => setVisible(false)}>
 				<div className={styles.productModal}>
-					<img alt="" src={right} />
+					<img alt="" src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/main_page_5/right.png'} />
 					<div className={styles.title}>Conceptual Design</div>
 					<p>
 						Bring us your current idea or let one of our experienced

@@ -5,7 +5,7 @@ const Page4 = () => {
 	return (
 		<div className={`${styles.page} ${styles.page4} enableScroll`}>
 			<div className={styles.intro}>
-				<img src="/image/intro.png" alt="introduce" />
+				<img src="https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/intro.png" alt="introduce" />
 			</div>
 			<div className={styles.textSection}>
 				<h3 className={styles.title}>LIVE LIFE IN FULL COLOR</h3>

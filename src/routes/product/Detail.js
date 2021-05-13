@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 import styles from './Detail.module.scss';
-import { Modal } from 'antd-mobile'
-import logoIcon from '@/assets/logo_white.png';
-import closeIcon from '@/assets/close.png';
 const Detail = ({ setVisible, detail }) => {
 	const [item] = useState(detail.items);
 	const [imgIndex, setImgIndex] = useState(0);
@@ -13,11 +10,11 @@ const Detail = ({ setVisible, detail }) => {
 
 	return (
 		<div className={styles.content}>
-			<img alt="" className={styles.logo} src={logoIcon} />
+			<img alt="" className={styles.logo} src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/logo_white.png'} />
 			<img
 				alt=""
 				className={styles.close}
-				src={closeIcon}
+				src={'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/mobile/close.png'}
 				onClick={() => setVisible(false)}
 			/>
 			<div onClick={() => { setPreViewImg(true) }} className={styles.bigImage} style={{ backgroundImage: `url(${gImgs[imgIndex] && gImgs[imgIndex].url ? gImgs[imgIndex].url : 'https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/images2/default3.png'})` }}>
