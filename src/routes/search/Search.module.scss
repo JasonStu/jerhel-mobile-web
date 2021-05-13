@@ -8,6 +8,8 @@
 	height: 100vh;
 	z-index: 1000;
 	background-color: rgba($primaryColor, 0.8);
+	animation: _right .3s linear;
+	animation-fill-mode: forwards;
 	:global {
 		.react-select {
 			&__control {
@@ -84,25 +86,28 @@
 		}
 	}
 	.list {
-		display: grid;
+		display: flex;
+		flex-wrap: wrap;
 		margin: 0 80px;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 260px);
-		grid-gap: 60px 70px;
-		margin-top: 72px;
+		margin-top: 20px;
+		padding-top: 52px;
 		height: calc(100% - 372px);
 		overflow: auto;
 		.item {
 			position: relative;
 			cursor: pointer;
+			width: calc((100vw - 230px) / 2);
 			&::after {
 				position: absolute;
 				right: 0;
 				top: 0;
 			}
-			img {
-				max-width: 100%;
-				max-height: 100%;
+			.imgBox {
+				width: 100%;
+				height: calc((100vw - 230px) / 2);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
 			}
 			.label {
 				font-size: 26px;
@@ -115,5 +120,21 @@
 				width: 100%;
 			}
 		}
+		.item:nth-child(2n) {
+			margin-left: 70px;
+		}
+		.item:nth-child(n + 3) {
+			margin-top: 60px;
+		}
 	}
+}
+
+@keyframes _right
+{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
 }

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import Select from 'react-select';
 import _ from 'lodash';
+import { request } from '@/utils/http.js'
 import styles from './Search.module.scss';
 import searchIcon from '../../assets/search.png';
 import closeIcon from '../../assets/close.png';
@@ -47,12 +48,30 @@ const customStyles = {
 		display: 'none',
 	}),
 };
-const productList = _.times(6, (index) => ({
-	image: `/image/search/product_${index + 1}.png`,
-	label: 'NEW PRODUCTS',
-}));
+
 const Search = withRouter(({ history, setVisible }) => {
 	const [selectedOption, setSelectedOption] = useState(options[0]);
+	const [goodsList, setGoodsList] = useState([]);
+
+	const getCategoryList = (obj = {}) => {
+		request({
+			url: '/websiteApi/items/getCategoryList',
+			method: 'get',
+			data: _.cloneDeep({...obj})
+		})
+		.then(res => {
+			if (res.code === 1) {
+				setGoodsList(res.data)
+			}
+		})
+		.catch(err => {
+			console.log(err)
+		})
+	}
+
+	useEffect(() => {
+		getCategoryList()
+	}, [])
 
 	return (
 		<div className={styles.content}>
@@ -64,7 +83,9 @@ const Search = withRouter(({ history, setVisible }) => {
 			/>
 			<div className={styles.top}>
 				<div className={styles.inputWr}>
-					<input type="text" placeholder="Search" />
+					<input type="text" placeholder="Search" onInput={_.debounce(function (v) {
+						getCategoryList({ name: v.target.value })
+					}, 500)} />
 					<span className={styles.suffix}>
 						<img src={searchIcon} alt="search" />
 					</span>
@@ -79,17 +100,26 @@ const Search = withRouter(({ history, setVisible }) => {
 				/>
 			</div>
 			<div className={styles.list}>
-				{_.map(productList, (item, index) => (
+				{_.map(goodsList, (item, index) => (
 					<div
 						className={styles.item}
 						key={index}
 						onClick={() => {
 							setVisible(false);
-							history.push('/product');
+							if (history.location.pathname === `/product`) {
+								history.replace(`/product`, {
+									id: item.id
+								});
+								history.go(0)
+							} else {
+								history.push(`/product`, {
+									id: item.id
+								});
+							}
 						}}
 					>
-						<img alt="" src={item.image}></img>
-						<div className={styles.label}>{item.label}</div>
+						<div className={styles.imgBox} style={{ backgroundImage: `url(${item.url || `https://jerhel.oss-cn-hongkong.aliyuncs.com/upload/images2/default.png`})` }} />
+						<div className={styles.label}>{item.name}</div>
 					</div>
 				))}
 			</div>

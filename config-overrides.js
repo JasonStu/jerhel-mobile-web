@@ -23,16 +23,16 @@ const devServerConfig = () => (config) => {
 	return {
 		...config,
 		// 服务开启gzip
-		// compress: true,
-		// proxy: {
-		// 	'/api': {
-		// 		target: 'xxx',
-		// 		changeOrigin: true,
-		// 		pathRewrite: {
-		// 			'^/api': '/api',
-		// 		},
-		// 	},
-		// },
+		compress: true,
+		proxy: {
+			'/herf': {
+				target: 'http://cosmetics.duqingyu.top',
+				changeOrigin: true,
+				pathRewrite: {
+					'^/herf': '',
+				},
+			},
+		},
 	};
 };
 module.exports = {
