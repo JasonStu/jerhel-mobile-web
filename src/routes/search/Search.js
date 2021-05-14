@@ -1,54 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import Select from 'react-select';
 import _ from 'lodash';
 import { request } from '@/utils/http.js'
 import styles from './Search.module.scss';
-const options = [
-	{ value: 'product', label: 'NEW PRODUCTS' },
-	{ value: 'bottle', label: 'JAR/BOTTLE' },
-	{ value: 'series', label: 'ECO-FRIENDLY SERIES' },
-];
-const primaryColor = '#681F9A';
-
-const customStyles = {
-	option: (provided, state) => ({
-		...provided,
-		borderBottom: '1px dotted pink',
-		color: 'white',
-		fontFamily: 'AlibabaSans-Regular, AlibabaSans',
-		backgroundColor: state.isSelected ? primaryColor : '#333',
-		border: 'none',
-		'&:active': {
-			backgroundColor: primaryColor,
-		},
-	}),
-	control: (provided, state) => ({
-		...provided,
-		borderRadius: '40px',
-		border: '1px solid #ededed',
-		boxShadow: 'none',
-		'&:hover': {
-			borderColor: 'transparent',
-		},
-	}),
-	menu: (provided, state) => ({
-		...provided,
-		margin: 0,
-		padding: 0,
-	}),
-	menuList: (provided, state) => ({
-		...provided,
-		padding: 0,
-	}),
-	indicatorSeparator: (provided, state) => ({
-		...provided,
-		display: 'none',
-	}),
-};
+// const options = [
+// 	{ value: 'product', label: 'NEW PRODUCTS' },
+// 	{ value: 'bottle', label: 'JAR/BOTTLE' },
+// 	{ value: 'series', label: 'ECO-FRIENDLY SERIES' },
+// ];
 
 const Search = withRouter(({ history, setVisible }) => {
-	const [selectedOption, setSelectedOption] = useState(options[0]);
+	// const [selectedOption, setSelectedOption] = useState(options[0]);
 	const [goodsList, setGoodsList] = useState([]);
 
 	const getCategoryList = (obj = {}) => {
