@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, withRouter } from 'react-router-dom'
 import Detail from './Detail';
+import { Icon } from 'antd-mobile'
 import styles from './Product.module.scss';
 import { request } from '@/utils/http.js'
 import _ from 'lodash';
@@ -18,7 +19,7 @@ const filterParams = {
 	// max_diameter: 100
 }
 
-const Product = () => {
+const Product = withRouter(({ history }) => {
 	const query = useHistory().location.state
 	const [visible, setVisible] = useState(false);
 	const [isShowItem, setShowItem] = useState(false);
@@ -86,6 +87,13 @@ const Product = () => {
 	return (
 		<>
 			<div className={styles.page}>
+				<Icon type="cross" className={styles.closeIcon} onClick={() => {
+					if (isShowItem) {
+						setShowItem(false)
+					} else {
+						history.goBack()
+					}
+				}} />
 				<div className={styles.title}>{isShowItem ? 'Item' : 'Line (Sub Catorgory)'}</div>
 				{/* <div className={styles.filters}>
 					<div
@@ -145,5 +153,5 @@ const Product = () => {
 			{visible && <Detail setVisible={setVisible} detail={itemDetail} />}
 		</>
 	);
-};
+});
 export default Product;
